@@ -1,0 +1,37 @@
+%btn{
+    text-transform: uppercase;
+    color: white;
+    background-color: var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color2);
+    padding: 1rem 2rem;
+    width: max-content;
+    text-decoration: none;
+    transition: all .3s;
+    &:hover{
+        color: var(--secondary-color);
+        background-color: white;
+    }
+}
+
+.feedbacksbtn{
+    @extend %btn;
+    grid-column: 1/1;
+    grid-row: 3/3;
+    margin-top: 6rem;
+     @media only screen and (max-width:42.5em) {
+     margin-top: 10rem;
+  }
+    @media only screen and (max-width: 25.875em) {
+   margin-top: 6rem;
+  }
+  @media only screen and (max-width: 25em) {
+   margin-top: 6rem;
+  }
+}
+
+.submitbtn{
+     @extend %btn;
+     border: none;
+     border-bottom: 2px solid var(--primary-color2);
+     font-family: var(--text-font);
+}

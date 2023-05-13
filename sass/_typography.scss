@@ -1,0 +1,102 @@
+%heading {
+  font-weight: 400;
+  font-family: var(--heading-font);
+  color: var(--primary-color1);
+  text-transform: uppercase;
+}
+.heading-1 {
+  @extend %heading;
+  font-size: 3rem;
+  color: var(--secondary-color);
+  line-height: 0.8;
+  span {
+    font-size: 1.2rem;
+    margin-top: 0.8rem;
+    @media only screen and (max-width: 33.75em) {
+      color: #fff;
+    }
+  }
+  @media only screen and (max-width: 16.875em) {
+      font-size: 2rem;
+    }
+}
+.heading-2 {
+  @extend %heading;
+  font-size: 2rem;
+  &__logoo {
+    font-size: 4rem;
+    color: var(--secondary-color);
+  }
+}
+.heading-3 {
+  @extend %heading;
+}
+.heading-4 {
+  @extend %heading;
+  font-size: 1.4rem
+}
+.heading-5 {
+  @extend %heading;
+  font-size: 1.2rem;
+}
+
+.mb-sm {
+  margin-bottom: 2rem;
+}
+.mb-m {
+  margin-bottom: 3rem;
+}
+.mb-hg{margin-bottom: 6rem;}
+.mtnegative {
+  margin-top: -3rem;
+}
+
+
+.popup {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+  &__close{
+    &:link,
+    &:visited{
+        color: var(--secondary-color);
+        text-decoration: none;
+        top:2.5rem;
+        right: 2.5rem;
+        position: absolute;
+        display: inline-block;
+        font-size: 3rem;
+        transition: all .2s;
+    }
+    &:hover{
+        color: var(--primary-color1);
+    }
+  }
+
+  &__content {
+    height: 70vh;
+    width: 70vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--grey-color2);
+    position: absolute;
+  }
+  &__center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+}
